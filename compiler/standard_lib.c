@@ -32,6 +32,9 @@
 	static type name[array_size] = {contents};
 
 // Casts
+#define std_cast_float_string(name, value)\
+	char name[42];\
+	sprintf(name, "%f", value);
 
 #define std_cast_bool_string(name, value)\
 	const char * name = (value) ? "true" : "false";

@@ -11,6 +11,7 @@ class OperationType(Enum):
 	Free = "std_free"
 	Create_List = "std_list_create"
 	Create_List_Static = "std_list_static"
+	Cast_Float_String = "std_cast_float_string"
 	Cast_Bool_String = "std_cast_bool_string"
 	Cast_String_Int = "std_cast_string_int"
 	Cast_Int_String = "std_cast_int_string"
@@ -48,6 +49,8 @@ class Operation:
 				ret_type = Scalar_Type(self.args[1])
 			case OperationType.Create_List_Static:
 				ret_type = Scalar_Type(self.args[1])
+			case OperationType.Cast_Float_String:
+				ret_type = Scalar_Type.str
 			case OperationType.Cast_Bool_String:
 				ret_type = Scalar_Type.str
 			case OperationType.Cast_String_Int:

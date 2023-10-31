@@ -13,6 +13,13 @@ my_program.nodes = [
 				"\"!\""
 			)
 		),
+		Operation(OperationType.Call_Function_No_Return, None, "puts",
+			Operation(OperationType.Format_String, None, "3", 
+				"\"two plus five equals: \"",
+				Operation(OperationType.Math_Operation, None, "int", Literal("2"), "+", Literal("5")),
+				"\"!\""
+			)
+		),
 		Operation(OperationType.Return, None, "0")
 	)
 ]
